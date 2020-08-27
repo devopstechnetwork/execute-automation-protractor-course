@@ -1,0 +1,11 @@
+.color {
+  color: green !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.well div {
+  color: white;
+}
