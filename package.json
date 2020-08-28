@@ -10,7 +10,9 @@
     "e2e": "ng e2e",
     "update-webdriver": "node ./node_modules/protractor/node_modules/webdriver-manager/bin/webdriver-manager update",
     "start-webdriver": "node ./node_modules/protractor/node_modules/webdriver-manager/bin/webdriver-manager start",
-    "protractor-test": "tsc src/tests/protractor.conf.ts && protractor src/tests/protractor.conf.js"
+    "compile-protractor-config": "tsc src/tests/protractor.conf.ts",
+    "protractor-test": "npm run compile-protractor-config && protractor src/tests/protractor.conf.js",
+    "debug": "npm run compile-protractor-config && tsc --build src/tests/tsconfig.json"
   },
   "private": true,
   "dependencies": {

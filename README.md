@@ -1,27 +1,25 @@
-# EaCourseApp
+# Protractor Course
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
+[Github repo](https://github.com/jarrod-kallis/execute-automation-protractor-course)
 
-## Development server
+## Running tests locally
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`npm run start-webdriver`
+`npm start`
+`npm run protractor-test`
 
-## Code scaffolding
+## Finding single/multiple css elements
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Instead of: `element.all(by.css(".well.hoverwell.thumbnail > div"))`
+You can use (this is only applicable to <b>by.css</b>):
+Single/first element matching CSS selector (<b>element(by.css)</b>):
+`$(".well.hoverwell.thumbnail > div")`
+Multiple elements (<b>element.all(by.css)</b>):
+`$$(".well.hoverwell.thumbnail > div")`
 
-## Build
+## Finding an element within an element
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+element(by.xpath("//..."))
+  .element(by.xpath("//...")).click()
+```

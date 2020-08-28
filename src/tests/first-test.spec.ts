@@ -1,4 +1,4 @@
-describe('First Test', () => {
+xdescribe('First Test', () => {
   it('should pass', () => {
     expect(true).toBe(true);
   });

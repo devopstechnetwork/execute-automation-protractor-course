@@ -1,9 +1,9 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "../out-tsc/e2e",
+    "outDir": "/src/tests",
     "module": "commonjs",
-    "target": "es2018",
+    "target": "es5",
     "types": ["jasmine", "jasminewd2", "node"]
   }
 }

@@ -1,10 +1,10 @@
 <div [routerLink]="['/course', course.id]" class="well hoverwell thumbnail">
-  <h2> {{ course.name }} </h2>
+  <h2>{{ course.name }}</h2>
   <hr />
   <div> Release Date: {{ course.releaseDate }} </div>
   <div> Duration: {{ course.duration }} </div>
   <div> Level: {{ course.level }} </div>
-  <div [ngClass]=setProperties() [ngSwitch]="course?.releaseDate">
+  <div [ngClass]="setProperties()" [ngSwitch]="course?.releaseDate">
     Event Date: {{ course?.releaseDate }}
     <span *ngSwitchCase="'9/26/2017'">(4th quarter) </span>
     <span *ngSwitchCase="'6/26/2017'">(2nd quarter) </span>
